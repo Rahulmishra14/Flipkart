@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 8000;
 const URL =
   process.env.MONGO_URI ||
   `mongodb+srv://${userName}:${passWord}@cluster0.ipacw3s.mongodb.net/?retryWrites=true&w=majority`;
-connection();
+connection(URL);
 
 app.use(express.static(path.join(__dirname,"./client/build")))
 
